@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Template from './components/Template';
 
-function App() {
+const CampaignTemplate = () => {
+  const templates = [
+    {
+      templateName: 'White rose'
+    },
+    {
+      templateName: 'Gold leaf'
+    },{
+      templateName: 'Red velvet'
+    },{
+      templateName: 'Blue ocean'
+    },{
+      templateName: 'Green tea'
+    },{
+      templateName: 'Purple rain'
+    }
+  ]
+  
+  const [selectedTemplate, setSelectedTemplate] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-gray-100 h-screen p-10">
+      Your code goes here...
     </div>
   );
-}
+};
 
-export default App;
+export default CampaignTemplate;
